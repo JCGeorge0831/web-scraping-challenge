@@ -87,7 +87,7 @@ def scrape():
     # Creating a dictionary for the scraped sources
     mars_facts_data_dict = {
         'news_title': news_title,
-        ' news_p': news_p,
+        'news_p': news_p,
         'featured_image_url': featured_image_url,
         'html_table_mars_facts': html_table_mars_facts,
         'hemisphere_images': hemispheres_url_image

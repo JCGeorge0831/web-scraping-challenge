@@ -1,10 +1,29 @@
-.body {
-    margin: 0;
-    padding: 0;
+h1 {
+    font-weight: bolder;
+    color: orangered;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
 }
 
 h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:orangered;
+    color: orangered;
     font-weight: bolder;
 }
+
+.col-md-12 {
+    color: orange;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: orange;
+}
+
+.card {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: orange;
+    align-items: center; 
+    text-align: right;
+}
+
