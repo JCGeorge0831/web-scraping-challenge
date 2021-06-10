@@ -13,7 +13,7 @@ def init_browser():
 
 def scrape(): 
     browser = init_browser()
-    img_dict {}
+    img_dict = {}
 
     # URL of page to be scraped
     NASA_url = 'https://redplanetscience.com/'
