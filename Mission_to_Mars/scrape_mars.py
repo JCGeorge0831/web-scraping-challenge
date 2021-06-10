@@ -3,17 +3,12 @@ from bs4 import BeautifulSoup as bs
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 from flask import Flask, render_template, redirect
-import requests
-from flask_pymongo import PyMongo
 
-def init_browser(): 
+def scrape(): 
     # Setup splinter
     executable_path = {'executable_path': ChromeDriverManager().install()}
     browser = Browser('chrome', **executable_path, headless=False)
-
-def scrape(): 
-    browser = init_browser()
-    img_dict = {}
+    mars_facts_data_dict = {}
 
     # URL of page to be scraped
     NASA_url = 'https://redplanetscience.com/'
@@ -89,10 +84,19 @@ def scrape():
         #Append the dictionary with the image url string and the hemisphere title to a list
         hemispheres_url_image.append(img_dict)
 
-        # Closing browser after scraping
-        browser.quit()
+    # Creating a dictionary for the scraped sources
+    mars_facts_data_dict = {
+        'news_title': news_title,
+        ' news_p': news_p,
+        'featured_image_url': featured_image_url,
+        'html_table_mars_facts': html_table_mars_facts,
+        'hemisphere_images': hemispheres_url_image
+    }
 
-        return img_dict
+    # Closing browser after scraping
+    browser.quit()
+
+    return mars_facts_data_dict 
 
   
 
